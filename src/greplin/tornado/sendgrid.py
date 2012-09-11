@@ -48,9 +48,8 @@ class Sendgrid(object):
         logging.error("Message not sent. Missing required argument %s", required)
         callback(None)
         return
-    credentials = {'api_user':self._user, 'api_key':self._secret}
-    api_url = "%s.%s?%s" % (self._BASE_URL, self._FORMAT,
-                        urllib.urlencode(credentials))
+    kwargs.update({'api_user':self._user, 'api_key':self._secret})
+    api_url = "%s.%s" % (self._BASE_URL, self._FORMAT)
     post_body = urllib.urlencode(kwargs)
     http = httpclient.AsyncHTTPClient()
     request = httpclient.HTTPRequest(api_url, method='POST', body=post_body)
