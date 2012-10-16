@@ -26,7 +26,7 @@ setup(name='greplin-tornado-sendgrid',
       license='Apache',
       author='Greplin, Inc.',
       author_email='opensource@greplin.com',
-      url='http://www.github.com/Greplin/greplin-tornado-sendgrid',
+      url='https://www.github.com/Cue/greplin-tornado-sendgrid',
       package_dir = {'':'src'},
       packages = [
         'greplin',
